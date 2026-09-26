@@ -42,11 +42,6 @@
   mix-blend-mode: lighten;
 }
 
-.card1Bg,
-.card2Bg {
-  /* border: 2px solid red; DEBUG */
-}
-
 /* ---------- Center column ---------- */
 .center {
   flex: 1;
