@@ -1,4 +1,5 @@
 import styles from "./App.module.css";
+import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         <header className={styles.heroHeader}>
           <Navbar />
         </header>
+        <Hero />
       </section>
     </main>
   );

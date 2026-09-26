@@ -1,0 +1,75 @@
+.heroBody {
+  width: 100%;
+  border: 2px solid red;
+}
+
+.heroRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 2px solid blue;
+}
+
+/* ---------- Left column ---------- */
+.left {
+  position: relative;
+  flex: 0 0 430px;
+  min-height: 775px;
+  border: 2px dashed green;
+}
+
+.card1Bg {
+  position: absolute;
+  top: 115.66px;
+  left: -24.96px;
+  width: 406.04px;
+  height: 373.76px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  transform: rotate(179.56deg);
+  mix-blend-mode: lighten;
+}
+
+.card2Bg {
+  position: absolute;
+  top: 466px;
+  left: -20px;
+  width: 334.54px;
+  height: 308.5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  transform: rotate(-10deg);
+  mix-blend-mode: lighten;
+}
+
+.card1Bg,
+.card2Bg {
+  /* border: 2px solid red; DEBUG */
+}
+
+/* ---------- Center column ---------- */
+.center {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+  border: 2px dashed orange;
+}
+
+/* ---------- Right column ---------- */
+.right {
+  flex: 0 0 430px;
+  border: 2px dashed green;
+}
+
+/* ---------- Logo strip row ---------- */
+.logos {
+  width: 100%;
+  border: 2px dotted purple; /* DEBUG */
+}
+
+@media (max-width: 1600px) {
+  .left,
+  .right {
+    display: none;
+  }
+}
