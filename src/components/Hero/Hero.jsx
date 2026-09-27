@@ -39,6 +39,9 @@ function Hero() {
               Businesses Rely On Collectedge
             </span>
           </div>
+          <h1 className={styles.heading}>
+            Unified Platform for Late-Stage DPD Resolution.
+          </h1>
         </div>
         <div className={styles.right}>
           <div className={styles.card3Bg} />
