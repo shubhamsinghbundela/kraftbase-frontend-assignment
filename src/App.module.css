@@ -31,7 +31,12 @@
 
 .heroHeader {
   width: 100%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
+}
+
+.forLenders {
+  padding-top: 135px;
+  border: 2px solid yellow;
 }
 
 @media (max-width: 1024px) {
@@ -39,10 +44,16 @@
     min-height: auto;
     padding-bottom: 4rem;
   }
+  .forLenders {
+    padding-top: 80px;
+  }
 }
 
 @media (max-width: 767px) {
   .hero {
     padding-bottom: 3rem;
+  }
+  .forLenders {
+    padding-top: 56px;
   }
 }
