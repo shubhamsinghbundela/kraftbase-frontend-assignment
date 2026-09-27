@@ -42,6 +42,28 @@ function Hero() {
           <h1 className={styles.heading}>
             Unified Platform for Late-Stage DPD Resolution.
           </h1>
+          <p className={styles.subtext}>
+            Our tool is designed with agencies &amp; collection managers in
+            mind, ensuring user-friendly experience tailored to their needs
+          </p>
+          <div className={styles.buttonRow}>
+            <div className={styles.buttonRing}>
+              <a
+                href="#contact"
+                className={`${styles.button} ${styles.buttonPrimary}`}
+              >
+                Get free Trial
+              </a>
+            </div>
+            <div className={styles.buttonRing}>
+              <a
+                href="#how-we-work"
+                className={`${styles.button} ${styles.buttonSecondary}`}
+              >
+                How We work
+              </a>
+            </div>
+          </div>
         </div>
         <div className={styles.right}>
           <div className={styles.card3Bg} />
