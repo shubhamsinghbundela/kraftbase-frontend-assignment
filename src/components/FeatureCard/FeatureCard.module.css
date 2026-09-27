@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.05em;
+  background: linear-gradient(102.56deg, #020218 49%, #1948bd 111.04%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: rgba(109, 109, 109, 1);
+}
+
+.visual {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 720 / 455;
+  border-radius: 40px;
+}
+
+.visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    linear-gradient(
+      9.29deg,
+      rgba(5, 18, 51, 0.048) 26.56%,
+      rgba(5, 18, 51, 0.0585) 97.71%
+    );
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    gap: 32px;
+  }
+  .text {
+    gap: 16px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .visual {
+    border-radius: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    gap: 24px;
+  }
+  .text {
+    gap: 12px;
+  }
+
+  .titleRow {
+    gap: 8px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .visual {
+    border-radius: 24px;
+  }
+}

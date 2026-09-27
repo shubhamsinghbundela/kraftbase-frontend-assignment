@@ -33,6 +33,73 @@
   -webkit-text-fill-color: transparent;
 }
 
+.grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 101px;
+  max-width: calc(1640px + 48px);
+  margin: 120px auto 0;
+  padding-inline: 24px;
+  border: 2px solid red;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(40px, 6.8vw, 130px);
+}
+
+.cardLeft {
+  flex: 760 1 0;
+}
+.cardRight {
+  flex: 750 1 0;
+}
+
+.agentCard {
+  position: absolute;
+  height: auto;
+  transform-origin: top left;
+}
+
+.cheyenne {
+  left: 12.78%; /* 92 ÷ 720 */
+  top: 12.97%; /* (243 − 184) ÷ 455 */
+  width: 68.44%; /* 492.8 ÷ 720 */
+  transform: rotate(-1.71deg); /* Figma 1.71° */
+  filter: drop-shadow(0 40px 54px rgba(31, 53, 74, 0.1));
+}
+
+.martin {
+  left: 18.4%; /* 132.49 ÷ 720 */
+  top: 64.99%; /* (479.69 − 184) ÷ 455 */
+  width: 51.76%; /* 372.65 ÷ 720 */
+  transform: rotate(0.8deg); /* Figma −0.8° */
+}
+
+.cristofer {
+  left: 27.16%; /* 195.58 ÷ 720 */
+  top: 38.64%; /* (359.79 − 184) ÷ 455 */
+  width: 59.29%; /* 426.91 ÷ 720 */
+  transform: rotate(2.69deg); /* Figma −2.69° */
+  filter: drop-shadow(0 32px 62px rgba(31, 53, 74, 0.1));
+}
+
+.agentAvatar {
+  position: absolute;
+  left: 77.36%; /* 557 ÷ 720 */
+  top: 88.13%; /* (585 − 184) ÷ 455 */
+  width: 8.33%; /* 60 ÷ 720 */
+  aspect-ratio: 1;
+  border-radius: 18px;
+  background: #ffe299;
+  object-fit: cover;
+  box-shadow: 0px 16px 52px rgba(31, 53, 74, 0.05);
+  transform: rotate(13.81deg);
+  transform-origin: top left;
+}
+
 @media (max-width: 1024px) {
   .heading {
     padding-inline: 24px;
@@ -45,6 +112,22 @@
   .title {
     font-size: 40px;
     line-height: 54px;
+  }
+
+  .grid {
+    gap: 64px;
+    margin-top: 72px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .cardLeft,
+  .cardRight {
+    flex: none;
+    width: 100%;
   }
 }
 
@@ -62,5 +145,22 @@
   .title {
     font-size: 30px;
     line-height: 40px;
+  }
+
+  .grid {
+    gap: 48px;
+    margin-top: 48px;
+    padding-inline: 16px;
+  }
+
+  .row {
+    gap: 48px;
+  }
+
+  .agentAvatar {
+    border-radius: 10px;
+    box-shadow:
+      0 0 0 3px #ffffff,
+      0 10px 30px rgba(31, 53, 74, 0.1);
   }
 }
