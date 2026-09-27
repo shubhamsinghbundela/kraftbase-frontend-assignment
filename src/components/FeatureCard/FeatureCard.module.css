@@ -60,6 +60,14 @@
   mix-blend-mode: multiply;
 }
 
+.visualContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  container-type: inline-size;
+}
+
 @media (max-width: 1024px) {
   .card {
     gap: 32px;

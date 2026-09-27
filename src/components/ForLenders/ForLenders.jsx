@@ -6,6 +6,19 @@ import cristoferCard from "../../assets/images/lenders/cristofer-card.png";
 import martinCard from "../../assets/images/lenders/martin-card.png";
 import avatarArtist from "../../assets/images/lenders/avatar-artist.png";
 
+import connectorTopLeft from "../../assets/icons/connector-top-left.svg";
+import connectorBottomLeft from "../../assets/icons/connector-bottom-left.svg";
+import connectorTopRight from "../../assets/icons/connector-top-right.svg";
+import connectorBottomRight from "../../assets/icons/connector-bottom-right.svg";
+import settingIcon from "../../assets/icons/setting-02.svg";
+import codeIcon from "../../assets/icons/code.svg";
+import databaseIcon from "../../assets/icons/database.svg";
+import sidebarIcon from "../../assets/icons/sidebar-top.svg";
+import logo from "../../assets/logo.svg";
+
+import chartCard from "../../assets/images/lenders/chart-card.png";
+import healthCard from "../../assets/images/lenders/health-card.png";
+
 function ForLenders() {
   return (
     <div className={styles.forLenders}>
@@ -44,7 +57,50 @@ function ForLenders() {
             title="Highly Customizable"
             description="Our tool is designed with agencies & collection managers in mind, ensuring user-friendly experience tailored to their needs"
           >
-            {/* visual box later */}
+            {/* dashed line */}
+            <img
+              src={connectorTopLeft}
+              alt=""
+              className={`${styles.connector} ${styles.connectorTopLeft}`}
+            />
+            <img
+              src={connectorBottomLeft}
+              alt=""
+              className={`${styles.connector} ${styles.connectorBottomLeft}`}
+            />
+            <img
+              src={connectorTopRight}
+              alt=""
+              className={`${styles.connector} ${styles.connectorTopRight}`}
+            />
+            <img
+              src={connectorBottomRight}
+              alt=""
+              className={`${styles.connector} ${styles.connectorBottomRight}`}
+            />
+
+            {/* Center */}
+            <span className={styles.halo} />
+            <span className={styles.hub}>
+              <img src={logo} alt="" />
+            </span>
+
+            {/* Four small circles */}
+            <span className={`${styles.bubble} ${styles.bubbleTopLeft}`}>
+              <img src={settingIcon} alt="" />
+            </span>
+            <span className={`${styles.bubble} ${styles.bubbleBottomLeft}`}>
+              <img src={codeIcon} alt="" />
+            </span>
+            <span className={`${styles.bubble} ${styles.bubbleTopRight}`}>
+              <img src={databaseIcon} alt="" />
+            </span>
+            <span className={`${styles.bubble} ${styles.bubbleBottomRight}`}>
+              <img src={sidebarIcon} alt="" />
+            </span>
+
+            {/* Button */}
+            <span className={styles.apiButton}>API integration</span>
           </FeatureCard>
         </div>
 
@@ -54,7 +110,15 @@ function ForLenders() {
             title="Driven by Data"
             description="Our data-driven approach equips collection managers with insights to make informed & actionable decisions"
           >
-            {/* visual box later */}
+            <img src={chartCard} alt="" className={styles.chartCard} />
+            <img src={healthCard} alt="" className={styles.healthCard} />
+            <button
+              type="button"
+              className={styles.addButton}
+              aria-label="Add widget"
+            >
+              +
+            </button>
           </FeatureCard>
           <FeatureCard
             className={styles.cardRight}
