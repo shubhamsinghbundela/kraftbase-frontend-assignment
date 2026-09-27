@@ -2,6 +2,7 @@ import styles from "./Hero.module.css";
 import avatar1 from "../../assets/images/avatars/avatar-1.jpg";
 import avatar2 from "../../assets/images/avatars/avatar-2.jpg";
 import avatar3 from "../../assets/images/avatars/avatar-3.jpg";
+import LogoSlider from "../LogoSlider/LogoSlider";
 
 function Hero() {
   return (
@@ -70,7 +71,22 @@ function Hero() {
         </div>
       </div>
 
-      <div className={styles.logos}>{/* Join 4,000+ + bank logos */}</div>
+      <div className={styles.logos}>
+        <div className={styles.joinRow}>
+          <span
+            className={`${styles.line} ${styles.lineLeft}`}
+            aria-hidden="true"
+          />
+          <p className={styles.joinText}>
+            Join <strong>4,000+</strong> Companies Already Grow
+          </p>
+          <span
+            className={`${styles.line} ${styles.lineRight}`}
+            aria-hidden="true"
+          />
+        </div>
+        <LogoSlider />
+      </div>
     </div>
   );
 }
