@@ -3,6 +3,7 @@ import ForAgencies from "./components/ForAgencies/ForAgencies";
 import ForLenders from "./components/ForLenders/ForLenders";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
+import Testimonials from "./components/Testimonials/Testimonials";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </section>
       <section id="agencies" className={styles.forAgencies}>
         <ForAgencies />
+      </section>
+      <section id="testimonials" className={styles.testimonials}>
+        <Testimonials />
       </section>
     </main>
   );
