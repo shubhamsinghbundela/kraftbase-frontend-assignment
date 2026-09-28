@@ -41,6 +41,20 @@
   max-width: 720px;
   aspect-ratio: 720 / 455;
   border-radius: 40px;
+  background:
+    linear-gradient(
+      75deg,
+      rgba(202, 235, 253, 0.61) 4.45%,
+      rgba(206, 213, 249, 0.61) 20.94%,
+      rgba(255, 255, 255, 0) 38.74%
+    ),
+    linear-gradient(
+      -75deg,
+      rgba(202, 235, 253, 0.61) 4.45%,
+      rgba(206, 213, 249, 0.61) 20.94%,
+      rgba(255, 255, 255, 0) 38.74%
+    ),
+    #ffffff;
 }
 
 .visual::before {

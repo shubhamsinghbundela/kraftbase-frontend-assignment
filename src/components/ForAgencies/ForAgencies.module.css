@@ -5,20 +5,330 @@
   max-width: calc(1196px + 48px);
   margin: 60px auto 0;
   padding-inline: 24px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .tab {
-  flex: 1;
   min-width: 0;
-  height: 84px;
-  border: 2px dashed purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 29px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tab:first-child {
+  flex: 576 1 0;
+}
+.tab:last-child {
+  flex: 580 1 0;
+}
+
+.tabLabel {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(102.56deg, #020218 49%, #1948bd 111.04%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tabActive .tabLabel {
+  font-weight: 600;
+}
+
+.tabLine {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+}
+
+.tabLine::before {
+  /* faint track */
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #1952f1, #418df8);
+  opacity: 0.12;
+}
+
+.tabLine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 49.65%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #1952f1, #418df8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.tabActive .tabLine::after {
+  transform: scaleX(1);
+}
+
+.content {
+  display: flex;
+  gap: 39px;
+  width: 100%;
+  max-width: calc(1640px + 48px);
+  margin: 51px auto 0;
+  padding-inline: 24px;
+  /* border: 2px solid red; */
+}
+
+.cardLeft {
+  position: relative;
+  aspect-ratio: 775 / 470;
+  border-radius: 40px;
+  overflow: hidden;
+  container-type: inline-size;
+  background: linear-gradient(
+    -125deg,
+    rgba(202, 235, 253, 0.61) 4.45%,
+    rgba(206, 213, 249, 0.61) 20.94%,
+    rgba(255, 255, 255, 0) 38.74%
+  );
+}
+
+.cardLeft::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+}
+
+.panelOuter {
+  /* border: 1px solid blue; */
+  position: absolute;
+  left: 8%; /* 62 ÷ 775 */
+  top: 12.77%; /* 60 ÷ 470 */
+  width: 84%; /* 651 ÷ 775 */
+  height: 87.23%; /* 410 ÷ 470 */
+  border-radius: 5.16cqw 5.16cqw 0 0; /* 40px */
+  background: linear-gradient(
+    180deg,
+    #ffffff 3.8%,
+    rgba(255, 255, 255, 0) 66.33%
+  );
+  filter: drop-shadow(0px -20px 140px rgba(31, 53, 74, 0.12));
+}
+
+.panelInner {
+  /* border: 1px solid green; */
+  position: absolute;
+  left: 9.55%; /* 74 ÷ 775 */
+  top: 15.32%; /* 72 ÷ 470 */
+  width: 80.9%; /* 627 ÷ 775 */
+  height: 81.7%; /* 384 ÷ 470 */
+  border-radius: 4.13cqw 4.13cqw 0 0; /* 32px */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none; /* Figma: 1px, 1px, 0px, 1px */
+  background: linear-gradient(
+    3.26deg,
+    rgba(255, 255, 255, 0) 3.26%,
+    rgba(227, 230, 250, 0.3) 88.12%
+  );
+}
+
+.gaugeTitle {
+  position: absolute;
+  left: 12.65%; /* 98 ÷ 775 */
+  top: 19.57%; /* 92 ÷ 470 */
+  width: 61.29%; /* 475 ÷ 775 */
+  font-size: 3.35cqw; /* 26px */
+  font-weight: 500;
+  line-height: 4.65cqw; /* 36px */
+  letter-spacing: -0.05em;
+  background: linear-gradient(102.56deg, #020218 49%, #1948bd 111.04%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gaugeBox {
+  position: absolute;
+  left: 19.61%; /* 152 ÷ 775 */
+  top: 41.06%; /* 193 ÷ 470 */
+  width: 57.68%; /* 447 ÷ 775 */
+  aspect-ratio: 447 / 237; /* height no longer depends on the image */
+  container-type: inline-size;
+}
+
+/* SVG is 501 wide: arc = first 447px, glow = extra 54px on the right */
+.gauge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 112.08%; /* 501 ÷ 447 */
+  max-width: none;
+  height: auto;
+}
+
+.gaugeValue {
+  position: absolute;
+  left: 52.68%; /* 235.5 ÷ 447 */
+  top: 40.08%; /* 95 ÷ 237 */
+  transform: translateX(-50%);
+  font-size: 11.86cqw; /* 53 ÷ 447 */
+  font-weight: 600;
+  line-height: 1.094; /* 58 ÷ 53 */
+  letter-spacing: -0.04em;
+  color: #242424;
+  white-space: nowrap;
+}
+
+.gaugeText {
+  position: absolute;
+  left: 52.57%; /* 235 ÷ 447 */
+  top: 71.73%; /* 170 ÷ 237 */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.79cqw; /* 8 ÷ 447 */
+  text-align: center;
+  white-space: nowrap;
+}
+
+.gaugeStatus {
+  font-size: 4.03cqw; /* 18 ÷ 447 */
+  font-weight: 600;
+  line-height: 1.11; /* 20 ÷ 18 */
+  letter-spacing: -0.03em;
+  color: #242424;
+}
+
+.gaugeDate {
+  font-size: 3.13cqw; /* 14 ÷ 447 */
+  font-weight: 500;
+  line-height: 1.29; /* 18 ÷ 14 */
+  letter-spacing: -0.036em;
+  color: #7a7a7a;
+}
+
+.cardLeft {
+  flex: 775 1 0;
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 40px;
+  margin: 0;
+  list-style: none;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 26px 100px rgba(31, 53, 74, 0.04);
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  min-height: 122px;
+  padding: 0 40px 0 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.53);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 0 1px rgba(25, 82, 241, 0.25),
+    0 12px 32px rgba(31, 53, 74, 0.08);
+}
+
+.benefitIcon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff 0%, #edeffa 50%, #ffffff 100%);
+}
+
+.benefitIcon img {
+  width: 40%;
+  height: auto;
+}
+
+.benefitText {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #020218;
+}
+
+.cardRight {
+  flex: 826 1 0;
 }
 
 @media (max-width: 1024px) {
   .tabs {
     gap: 24px;
     margin-top: 48px;
+  }
+  .tab {
+    gap: 20px;
+  }
+  .tabLabel {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .content {
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .cardLeft,
+  .cardRight {
+    flex: none; /* ← removes flex-basis: 0, so aspect-ratio works again */
+    width: 100%;
+  }
+
+  .cardLeft {
+    max-width: 775px; /* never bigger than Figma */
+    align-self: center;
+    border-radius: 24px;
+  }
+
+  .cardRight {
+    padding: 32px;
+    border-radius: 24px;
+  }
+
+  .benefit {
+    min-height: 100px;
+    gap: 24px;
+  }
+
+  .benefitText {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -29,6 +339,47 @@
     padding-inline: 16px;
   }
   .tab {
-    height: 64px;
+    gap: 12px;
+  }
+  .tabLabel {
+    font-size: 16px;
+    line-height: 22px;
+    white-space: normal;
+  }
+  .tabLine {
+    height: 4px;
+  }
+
+  .content {
+    gap: 24px;
+    margin-top: 32px;
+    padding-inline: 16px;
+  }
+
+  .cardLeft {
+    border-radius: 20px;
+  }
+
+  .cardRight {
+    padding: 16px;
+    gap: 10px;
+    border-radius: 20px;
+  }
+
+  .benefit {
+    min-height: 0;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .benefitIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .benefitText {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
