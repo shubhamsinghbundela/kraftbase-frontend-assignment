@@ -1,4 +1,5 @@
 import styles from "./App.module.css";
+import Footer from "./components/Footer/Footer";
 import ForAgencies from "./components/ForAgencies/ForAgencies";
 import ForLenders from "./components/ForLenders/ForLenders";
 import Hero from "./components/Hero/Hero";
@@ -23,6 +24,9 @@ function App() {
       <section id="testimonials" className={styles.testimonials}>
         <Testimonials />
       </section>
+      <footer id="contact" className={styles.footer}>
+        <Footer />
+      </footer>
     </main>
   );
 }

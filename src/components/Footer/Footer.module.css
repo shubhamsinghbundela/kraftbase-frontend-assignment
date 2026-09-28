@@ -1,0 +1,493 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px dashed purple;  */
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 5px #ffffff,
+    0 16px 50px rgba(31, 42, 74, 0.09);
+  margin-bottom: 63px;
+}
+
+.badgeLogo {
+  width: 35.85%; /* 38 ÷ 106 */
+  height: auto;
+  transform: rotate(-8.86deg);
+}
+
+.contactText {
+  max-width: 725px;
+  margin-top: 28px; /* 5723 − (5547 + 148) */
+  padding-inline: 24px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  color: #6d6d6d;
+}
+
+.contactRing {
+  display: inline-flex;
+  margin-top: 24px; /* 5819 − (5723 + 72) */
+  padding: 6px;
+  border-radius: 24px;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 58px;
+  border: 4px solid transparent;
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, #1952f1 0%, #418df8 100%) padding-box,
+    linear-gradient(90deg, #6095db 0%, #1650eb 100%) border-box;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+contactButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 10px 24px rgba(25, 82, 241, 0.35);
+}
+
+.contactButton:active {
+  transform: translateY(0);
+}
+
+.contactButton:focus-visible {
+  outline: 2px solid #1952f1;
+  outline-offset: 4px;
+}
+
+.contactIcon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover .contactIcon {
+  transform: translate(2px, -2px);
+}
+
+.bar {
+  display: flex;
+  width: 100%;
+  max-width: calc(1640px + 48px);
+  margin: 138px auto 0; /* 6041 − (5819 + 84) */
+  padding-inline: 24px;
+}
+
+.column {
+  min-width: 0;
+}
+
+.colNav {
+  flex: 346 1 0;
+  padding-top: 25px; /* 6044 − 6019 */
+}
+
+.colBrand {
+  flex: 937 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px; /* 6109 − (6041 + 40) */
+  padding-inline: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px; /* text box height 34 */
+  color: #0d0d0d;
+  text-decoration: none;
+}
+
+.brandLogo {
+  width: 38px;
+  height: 40px;
+}
+
+.brandText {
+  max-width: 647px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #6d6d6d;
+}
+
+.colContact {
+  flex: 353 1 0;
+  padding-top: 25px;
+  padding-left: 67px; /* 1494 − 1427 */
+}
+
+.divider {
+  flex-shrink: 0;
+  width: 2px;
+  height: 180px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.colTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px; /* box height 29 */
+  color: #0d0d0d;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 36px 0 0; /* 6109 − (6044 + 29) */
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px; /* box height 22 */
+  color: #6d6d6d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #1952f1;
+}
+
+.navLink:focus-visible {
+  outline: 2px solid #1952f1;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* 6149 − (6109 + 24) */
+  margin: 36px 0 0; /* 6109 − (6044 + 29) */
+  padding: 0;
+  list-style: none;
+}
+
+.infoItem {
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6d6d6d;
+  text-decoration: none;
+}
+
+.infoEmail {
+  align-items: center;
+  gap: 8px; /* 1526 − (1494 + 24) */
+  line-height: 22px;
+  transition: color 0.3s ease;
+}
+
+.infoEmail:hover {
+  color: #1952f1;
+}
+
+.infoEmail:focus-visible {
+  outline: 2px solid #1952f1;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.infoAddress {
+  align-items: flex-start;
+  gap: 6px; /* 1524.11 − (1494 + 24) */
+  line-height: 27px; /* 54 ÷ 2 lines */
+}
+
+.addressText {
+  max-width: 256px; /* text box 255.89 */
+  font-style: normal;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.infoAddress .infoIcon {
+  margin-top: 5px; /* 6154 − 6149 */
+}
+
+.bottom {
+  width: 100%;
+  max-width: calc(1640px + 48px); /* line 140 → 1780 */
+  margin: 40px auto 0; /* 6243 − 6203 */
+  padding: 0 24px 24px;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.copyright {
+  margin-top: 31px; /* 6276 − 6245 */
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  color: #6d6d6d;
+}
+
+@media (max-width: 1024px) {
+  .badge {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 40px;
+  }
+
+  .contactText {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contactRing {
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 20px;
+  }
+
+  .contactButton {
+    padding: 14px 40px;
+    border-width: 3px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+
+  .bar {
+    margin-top: 80px;
+  }
+
+  .colContact {
+    padding-left: 32px;
+  }
+
+  .divider {
+    height: 160px;
+  }
+
+  .colTitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .colTitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .navList {
+    margin-top: 24px;
+  }
+
+  .navLink {
+    font-size: 16px;
+  }
+
+  .brand {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .brandLogo {
+    width: 32px;
+    height: 34px;
+  }
+
+  .brandText {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .infoList {
+    margin-top: 24px;
+    gap: 12px;
+  }
+  .infoItem {
+    font-size: 16px;
+  }
+  .infoAddress {
+    line-height: 24px;
+  }
+  .infoAddress .infoIcon {
+    margin-top: 0;
+  }
+  .infoIcon {
+    width: 20px;
+    height: 20px;
+  }
+  .bottom {
+    margin-top: 32px;
+    padding-bottom: 32px;
+  }
+  .copyright {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* ---------- Contact part (same as yours) ---------- */
+  .badge {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 28px;
+    box-shadow:
+      0 0 0 4px #ffffff,
+      0 12px 32px rgba(31, 42, 74, 0.09);
+  }
+
+  .contactText {
+    margin-top: 16px;
+    padding-inline: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contactRing {
+    margin-top: 16px;
+    padding: 4px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .contactButton {
+    width: auto;
+    padding: 12px 28px;
+    border-width: 2px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  /* ---------- Bar: stacked ---------- */
+  .bar {
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 56px;
+    padding-inline: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  /* Brand: first, centred */
+  .colBrand {
+    order: -1;
+    flex: none;
+    gap: 12px;
+    padding: 0 0 4px;
+  }
+
+  .brand {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .brandLogo {
+    width: 30px;
+    height: 32px;
+  }
+
+  .brandText {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  /* Navigation + Contact: left-aligned, thin line on top */
+  .colNav,
+  .colContact {
+    flex: none;
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .colTitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .navList,
+  .infoList {
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .navLink,
+  .infoItem {
+    font-size: 15px;
+  }
+
+  .infoAddress {
+    line-height: 24px;
+  }
+
+  .infoAddress .infoIcon {
+    margin-top: 0;
+  }
+
+  .addressText {
+    max-width: none;
+  }
+
+  .bottom {
+    margin-top: 28px;
+    padding: 0 20px 24px;
+  }
+  .copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

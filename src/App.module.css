@@ -48,6 +48,10 @@
   padding-top: 180px; /* 4198 − (3548 + 470) */
 }
 
+.footer {
+  padding-top: 168px; /* 5336.6 − (5084 + 84) */
+}
+
 @media (max-width: 1024px) {
   .hero {
     min-height: auto;
@@ -60,6 +64,9 @@
     padding-top: 120px;
   }
   .testimonials {
+    padding-top: 100px;
+  }
+  .footer {
     padding-top: 100px;
   }
 }
@@ -75,6 +82,9 @@
     padding-top: 80px;
   }
   .testimonials {
+    padding-top: 64px;
+  }
+  .footer {
     padding-top: 64px;
   }
 }
