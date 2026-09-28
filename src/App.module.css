@@ -39,6 +39,11 @@
   border: 2px solid yellow;
 }
 
+.forAgencies {
+  padding-top: 240px;
+  border: 4px solid brown;
+}
+
 @media (max-width: 1024px) {
   .hero {
     min-height: auto;
@@ -46,6 +51,9 @@
   }
   .forLenders {
     padding-top: 80px;
+  }
+  .forAgencies {
+    padding-top: 120px;
   }
 }
 
@@ -55,5 +63,8 @@
   }
   .forLenders {
     padding-top: 56px;
+  }
+  .forAgencies {
+    padding-top: 80px;
   }
 }

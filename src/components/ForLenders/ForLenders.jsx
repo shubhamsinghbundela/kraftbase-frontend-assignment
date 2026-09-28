@@ -22,16 +22,15 @@ import healthCard from "../../assets/images/lenders/health-card.png";
 import aflCard from "../../assets/images/lenders/af1-card.png";
 import enquiryCard from "../../assets/images/lenders/enquiry-card.png";
 import badgeBoltIcon from "../../assets/icons/badge-bolt.svg";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 function ForLenders() {
   return (
     <div className={styles.forLenders}>
-      <div className={styles.heading}>
-        <p className={styles.label}>For Lenders</p>
-        <h2 className={styles.title}>
-          We're changing the game with one complete agency management tool
-        </h2>
-      </div>
+      <SectionHeading
+        label="For Lenders"
+        title="We're changing the game with one complete agency management tool"
+      />
       <div className={styles.grid}>
         <div className={styles.row}>
           <FeatureCard
