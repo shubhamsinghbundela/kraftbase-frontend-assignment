@@ -267,6 +267,51 @@
     background 0.3s ease;
 }
 
+.aflCard {
+  position: absolute;
+  left: 16.28%; /* 117.20 ÷ 720 */
+  top: 12.73%; /* (241.94 − 184) ÷ 455 */
+  width: 56.13%;
+  height: auto;
+  transform: rotate(3.47deg);
+  filter: drop-shadow(0 40px 70px rgba(31, 53, 74, 0.1));
+}
+
+.enquiryCard {
+  position: absolute;
+  left: 48.73%; /* 350.85 ÷ 720 */
+  top: 65.87%; /* (483.73 − 184) ÷ 455 */
+  width: 40.64%;
+  height: auto;
+  transform: rotate(-8.34deg);
+  filter: drop-shadow(0 24px 50px rgba(31, 53, 74, 0.1)); /* [verify] */
+  transition: transform 0.3s ease;
+}
+
+.enquiryCard:hover {
+  transform: rotate(-8.34deg) translateY(-4px);
+}
+
+.badge {
+  position: absolute;
+  left: 71.45%; /* (544.3 − 29.84) ÷ 720 */
+  top: 51.77%; /* (449.4 − 29.84 − 184) ÷ 455 */
+  width: 8.29%; /* 59.68 ÷ 720 */
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff 0%, #edeffa 50%, #ffffff 100%);
+  box-shadow: 0 16px 76px rgba(31, 42, 74, 0.1);
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.badge img {
+  width: 74.6%; /* exported box 44.51 ÷ 59.68 */
+  height: auto;
+}
+
 /* Stop the pulse for "reduce motion" users */
 @media (prefers-reduced-motion: reduce) {
   .halo {

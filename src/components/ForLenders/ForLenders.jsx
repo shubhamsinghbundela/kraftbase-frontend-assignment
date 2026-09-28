@@ -19,6 +19,10 @@ import logo from "../../assets/logo.svg";
 import chartCard from "../../assets/images/lenders/chart-card.png";
 import healthCard from "../../assets/images/lenders/health-card.png";
 
+import aflCard from "../../assets/images/lenders/af1-card.png";
+import enquiryCard from "../../assets/images/lenders/enquiry-card.png";
+import badgeBoltIcon from "../../assets/icons/badge-bolt.svg";
+
 function ForLenders() {
   return (
     <div className={styles.forLenders}>
@@ -125,7 +129,11 @@ function ForLenders() {
             title="Discover Agency partners"
             description="Discover top-performing, tech-driven agencies designed to deliver results with minimal overhead."
           >
-            {/* visual box later */}
+            <img src={aflCard} alt="" className={styles.aflCard} />
+            <img src={enquiryCard} alt="" className={styles.enquiryCard} />
+            <span className={styles.badge}>
+              <img src={badgeBoltIcon} alt="" />
+            </span>
           </FeatureCard>
         </div>
       </div>
