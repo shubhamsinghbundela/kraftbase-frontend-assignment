@@ -1,0 +1,34 @@
+.tabs {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: calc(1196px + 48px);
+  margin: 60px auto 0;
+  padding-inline: 24px;
+  border: 2px solid red;
+}
+
+.tab {
+  flex: 1;
+  min-width: 0;
+  height: 84px;
+  border: 2px dashed purple;
+}
+
+@media (max-width: 1024px) {
+  .tabs {
+    gap: 24px;
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabs {
+    gap: 12px;
+    margin-top: 32px;
+    padding-inline: 16px;
+  }
+  .tab {
+    height: 64px;
+  }
+}
