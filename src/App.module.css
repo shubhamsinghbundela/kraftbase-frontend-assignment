@@ -50,6 +50,26 @@
 
 .footer {
   padding-top: 168px; /* 5336.6 − (5084 + 84) */
+  background:
+    linear-gradient(
+      75deg,
+      rgba(202, 235, 253, 0.61) 4.45%,
+      rgba(206, 213, 249, 0.61) 20.94%,
+      rgba(255, 255, 255, 0) 38.74%
+    ),
+    linear-gradient(
+      -75deg,
+      rgba(202, 235, 253, 0.61) 4.45%,
+      rgba(206, 213, 249, 0.61) 20.94%,
+      rgba(255, 255, 255, 0) 38.74%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(202, 235, 253, 0.61) 4.45%,
+      rgba(206, 213, 249, 0.61) 20.94%,
+      rgba(255, 255, 255, 0) 38.74%
+    ),
+    #ffffff;
 }
 
 @media (max-width: 1024px) {
