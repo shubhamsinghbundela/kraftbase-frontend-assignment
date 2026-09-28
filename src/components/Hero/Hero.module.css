@@ -14,7 +14,65 @@
   position: relative;
   flex: 0 0 430px;
   min-height: 775px;
-  border: 2px dashed green;
+  /* border: 2px dashed green; */
+}
+
+.cardCanvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.healthCard {
+  position: absolute;
+  top: 54.87px; /* (357.97 − 388.19/2) − 109 */
+  left: -4.78px;
+  width: 361.62px;
+  height: 388.19px;
+  max-width: none;
+  transform: rotate(9.38deg);
+  filter: drop-shadow(32px 88px 90px rgba(31, 53, 74, 0.08));
+}
+
+.aflCard {
+  position: absolute;
+  top: 464.18px; /* (713.24 − 280.11/2) − 109 */
+  left: 31.14px;
+  width: 343.36px;
+  height: 280.11px;
+  max-width: none;
+  transform: rotate(-5.27deg);
+  filter: drop-shadow(32px 64px 70px rgba(31, 42, 74, 0.1));
+}
+
+.floatBadge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 -8px 100px rgba(31, 42, 74, 0.18);
+}
+
+.floatBadge1 {
+  top: 155.06px; /* 264.06 − 109 */
+  left: 330.06px;
+  width: 78px;
+  height: 78px;
+  background: linear-gradient(142.77deg, #ffffff 0%, #edeffa 50%, #ffffff 100%);
+}
+
+.floatBadge2 {
+  top: 729.92px; /* 838.92 − 109 */
+  left: 78.9px;
+  width: 59.68px;
+  height: 59.68px;
+  background: linear-gradient(70.43deg, #ffffff 0%, #edeffa 50%, #ffffff 100%);
+}
+
+.floatBadgeIcon {
+  width: 50%;
+  height: auto;
 }
 
 .card1Bg {
@@ -192,19 +250,78 @@
   flex: 0 0 430px;
   min-height: 775px;
   position: relative;
-  border: 2px dashed green;
+  /* border: 2px dashed green; */
 }
 
 .card3Bg {
   position: absolute;
   top: 118.09px;
-  left: 22.4px;
+  left: 29.4px;
   width: 412.22px;
   height: 421.7px;
   background: rgba(255, 255, 255, 0.57);
   border-radius: 24px;
-  transform: rotate(-15deg);
+  transform: rotate(-12deg);
   mix-blend-mode: lighten;
+}
+
+.chartCard {
+  position: absolute;
+  top: 106.94px; /* (425.93 − 419.98/2) − 109 */
+  left: 95.32px; /* (1809.59 − 448.54/2) − 1490 */
+  width: 448.54px;
+  height: 419.98px;
+  max-width: none;
+  transform: rotate(6.76deg);
+  filter: drop-shadow(-72px 40px 70px rgba(31, 53, 74, 0.1)); /* blur 140 ÷ 2 */
+}
+
+.cheyenneCard {
+  position: absolute;
+  top: 568.42px; /* (743.97 − 133.09/2) − 109 */
+  left: 96.37px; /* (1810.37 − 447.99/2) − 1490 */
+  width: 447.99px;
+  height: 133.09px;
+  max-width: none;
+  transform: rotate(-5.53deg);
+  filter: drop-shadow(-72px 40px 70px rgba(31, 53, 74, 0.1));
+}
+
+.rogerCard {
+  position: absolute;
+  top: 700.5px; /* (844.66 − 70.32/2) − 109 */
+  left: 251.21px; /* (1859.55 − 236.68/2) − 1490 */
+  width: 236.68px;
+  height: 70.32px;
+  max-width: none;
+  transform: rotate(4.09deg);
+  filter: drop-shadow(-72px 40px 70px rgba(31, 42, 74, 0.1));
+}
+
+.floatBadge3 {
+  top: 40.27px; /* (188.27 − 39) − 109 */
+  left: 269.27px; /* (1798.27 − 39) − 1490 */
+  width: 78px;
+  height: 78px;
+  background: linear-gradient(156.64deg, #ffffff 0%, #edeffa 50%, #ffffff 100%);
+  box-shadow: 0 24px 100px rgba(31, 42, 74, 0.18); /* Y 24 here, not −8 */
+}
+
+.floatBadge3Icon {
+  position: absolute;
+  top: 14px; /* 39 − 25 */
+  left: 10.01px; /* 39 − 3.99 − 25 */
+  width: 50px;
+  height: 50px;
+  transform: rotate(-17.23deg);
+}
+
+.floatBadge4 {
+  top: 532.99px; /* (677.16 − 35.17) − 109 */
+  left: 165.97px; /* (1691.13 − 35.17) − 1490 */
+  width: 70.33px;
+  height: 70.33px;
+  background: linear-gradient(190.56deg, #ffffff 0%, #edeffa 50%, #ffffff 100%);
 }
 
 /* ---------- Logo strip row ---------- */

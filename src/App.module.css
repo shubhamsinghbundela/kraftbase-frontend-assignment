@@ -26,7 +26,7 @@
     ),
     #ffffff;
   overflow-x: clip;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .heroHeader {
