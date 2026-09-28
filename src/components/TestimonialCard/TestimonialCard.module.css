@@ -1,0 +1,215 @@
+.card {
+  grid-area: 1 / 1; /* all cards share the same spot in the track */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 39px; /* 4424 − 4384, 587 − 548 */
+  border-radius: 32px;
+  border: 1px solid rgba(140, 158, 216, 0.35);
+  background: linear-gradient(
+    312.41deg,
+    #8c9ed8 -2.9%,
+    rgba(140, 158, 216, 0) 49.64%
+  );
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.center {
+  z-index: 2;
+  opacity: 1;
+  transform: none;
+}
+
+.left,
+.right {
+  z-index: 1;
+  opacity: 0.45;
+  pointer-events: none; /* only arrows move the carousel */
+}
+
+.left {
+  transform: translateX(calc(-100% - 40px)) scale(0.88);
+}
+.right {
+  transform: translateX(calc(100% + 40px)) scale(0.88);
+}
+
+.hidden {
+  z-index: 0;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1952f1 0%, #418df8 100%);
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #020218;
+}
+
+.role {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  color: #6d6d6d;
+}
+
+.quote {
+  margin: 33px 0 0; /* 4531 − (4424 + 74) */
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 38px;
+  color: #020218;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-top: 31px; /* 4804 − (4531 + 242) */
+}
+
+.star {
+  width: 44px;
+  height: 44px;
+}
+
+.starEmpty {
+  opacity: 0.3;
+}
+
+.social {
+  position: absolute;
+  right: 44px; /* [verify] */
+  bottom: 44px; /* [verify] */
+  width: 44px; /* [verify] */
+  height: 44px;
+  opacity: 0.4;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    padding: 32px;
+    border-radius: 24px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+  .role {
+    font-size: 18px;
+  }
+  .quote {
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .stars {
+    margin-top: 24px;
+  }
+
+  .star {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social {
+    right: 32px;
+    bottom: 32px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .left,
+  .right {
+    opacity: 0; /* side cards hidden on phones */
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .header {
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .initials {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+  .role {
+    font-size: 14px;
+  }
+
+  .quote {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .stars {
+    margin-top: 16px;
+  }
+
+  .star {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social {
+    right: 20px;
+    bottom: 20px;
+    width: 24px;
+    height: 24px;
+  }
+}
